@@ -1,0 +1,52 @@
+{
+  "title": "Untitled Document",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Atharva Pradip Rahate",
+      "page": 1,
+      "children": [
+        {
+          "level": "H3",
+          "text": "EDUCATION",
+          "page": 1
+        },
+        {
+          "level": "H3",
+          "text": "WORK EXPERIENCE",
+          "page": 1
+        },
+        {
+          "level": "H3",
+          "text": "Celebal Technologies",
+          "page": 1
+        },
+        {
+          "level": "H3",
+          "text": "Tactique",
+          "page": 1
+        },
+        {
+          "level": "H3",
+          "text": "Talent Battle Pvt Ltd",
+          "page": 1
+        },
+        {
+          "level": "H3",
+          "text": "Internship Studio",
+          "page": 1
+        },
+        {
+          "level": "H3",
+          "text": "PROJECTS",
+          "page": 1
+        },
+        {
+          "level": "H2",
+          "text": "HONORS",
+          "page": 1
+        }
+      ]
+    }
+  ]
+}

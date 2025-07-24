@@ -1,0 +1,354 @@
+{
+  "title": "Technology",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "KICKSTART",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "KICKSTART",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "DSA AND",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "DSA AND",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "FUTURE TECH",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "FUTURE TECH",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "STACK",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "STACK",
+      "page": 1,
+      "children": [
+        {
+          "level": "H3",
+          "text": "DSA",
+          "page": 2
+        },
+        {
+          "level": "H3",
+          "text": "WHO I AM ?",
+          "page": 2
+        },
+        {
+          "level": "H3",
+          "text": "Python",
+          "page": 2
+        },
+        {
+          "level": "H3",
+          "text": "01. Intervee",
+          "page": 3
+        },
+        {
+          "level": "H3",
+          "text": "02. Expenza ai",
+          "page": 3
+        },
+        {
+          "level": "H3",
+          "text": "03. StegaShield",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "PROJECTS",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "PROJECTS",
+      "page": 3,
+      "children": [
+        {
+          "level": "H3",
+          "text": "WAS DSA HELPFUL IN THESE?",
+          "page": 3
+        },
+        {
+          "level": "H3",
+          "text": "WAS DSA HELPFUL IN THESE?",
+          "page": 3
+        },
+        {
+          "level": "H3",
+          "text": "YEAHHHHHHHHHHHHHHH!!!!!!!!!!!!!",
+          "page": 3
+        },
+        {
+          "level": "H2",
+          "text": "WHAT IS DSA???",
+          "page": 4
+        },
+        {
+          "level": "H2",
+          "text": "LANGUAGE?",
+          "page": 5,
+          "children": [
+            {
+              "level": "H3",
+              "text": "01. Java",
+              "page": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "INDUSTRY USE",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "INDUSTRY USE",
+      "page": 6,
+      "children": [
+        {
+          "level": "H3",
+          "text": "02. Python",
+          "page": 6
+        },
+        {
+          "level": "H3",
+          "text": "03. C++",
+          "page": 6
+        }
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "SERVICE BASED",
+      "page": 7
+    },
+    {
+      "level": "H1",
+      "text": "SERVICE BASED",
+      "page": 7
+    },
+    {
+      "level": "H1",
+      "text": "PRODUCT BASED",
+      "page": 7
+    },
+    {
+      "level": "H1",
+      "text": "PRODUCT BASED",
+      "page": 7,
+      "children": [
+        {
+          "level": "H3",
+          "text": "Aspect",
+          "page": 7
+        },
+        {
+          "level": "H3",
+          "text": "Service-Based Companies",
+          "page": 7
+        },
+        {
+          "level": "H3",
+          "text": "Product-Based Companies",
+          "page": 7
+        },
+        {
+          "level": "H3",
+          "text": "Business Model",
+          "page": 7
+        },
+        {
+          "level": "H3",
+          "text": "Examples",
+          "page": 7
+        },
+        {
+          "level": "H3",
+          "text": "Work Nature",
+          "page": 7
+        },
+        {
+          "level": "H3",
+          "text": "Learning Curve",
+          "page": 7
+        },
+        {
+          "level": "H3",
+          "text": "Tech Stack",
+          "page": 7
+        },
+        {
+          "level": "H3",
+          "text": "Salary & Benefits",
+          "page": 7
+        },
+        {
+          "level": "H3",
+          "text": "Work Pressure",
+          "page": 7
+        },
+        {
+          "level": "H3",
+          "text": "Career Growth",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "PATTERNS IN DSA",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "PATTERNS IN DSA",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "LETS SEE SOME",
+      "page": 9
+    },
+    {
+      "level": "H1",
+      "text": "PROBLEMS",
+      "page": 9
+    },
+    {
+      "level": "H1",
+      "text": "FUTURE",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "FUTURE",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "TECH STACK",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "TECH STACK",
+      "page": 10,
+      "children": [
+        {
+          "level": "H3",
+          "text": "2.Web3 (Solidity, Ethereum),",
+          "page": 10
+        },
+        {
+          "level": "H3",
+          "text": "WHAT TO LEARN NEXT ???",
+          "page": 10
+        },
+        {
+          "level": "H3",
+          "text": "WHAT TO LEARN NEXT ???",
+          "page": 10
+        },
+        {
+          "level": "H2",
+          "text": "IF ANY DOUBTS CONNECT",
+          "page": 11
+        },
+        {
+          "level": "H2",
+          "text": "IF ANY DOUBTS CONNECT",
+          "page": 11
+        },
+        {
+          "level": "H2",
+          "text": "ME ON LINKEDIN",
+          "page": 11
+        },
+        {
+          "level": "H2",
+          "text": "ME ON LINKEDIN",
+          "page": 11
+        }
+      ]
+    },
+    {
+      "level": "H1",
+      "text": "RESOURCES THAT I USE",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "ANY DOUBTS",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "ANY DOUBTS",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "ABOUT",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "ABOUT",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "ANYTHING ?",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "ANYTHING ?",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "THANKYOU !!!!",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "THANKYOU !!!!",
+      "page": 13,
+      "children": [
+        {
+          "level": "H3",
+          "text": "FEEL FREE TO REACH OUT......",
+          "page": 13
+        },
+        {
+          "level": "H3",
+          "text": "FEEL FREE TO REACH OUT......",
+          "page": 13
+        }
+      ]
+    }
+  ]
+}
