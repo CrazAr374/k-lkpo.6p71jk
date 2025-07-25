@@ -2,19 +2,263 @@
   "title": "Untitled Document",
   "outline": [
     {
+      "text": "Welcome to the   “Connecting the Dots” Challenge",
+      "size": 20.0,
+      "bold": false,
+      "centered": false,
+      "underlined": false,
+      "color": 935520,
+      "y": 76.530029296875,
+      "all_caps": false,
+      "page": 2,
+      "score": 0.7999999999999999,
       "level": "H1",
+      "children": [
+        {
+          "text": "•   Round 1:",
+          "size": 12.0,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 0,
+          "y": 334.3500061035156,
+          "all_caps": false,
+          "page": 2,
+          "score": 0.5,
+          "level": "H3"
+        },
+        {
+          "text": "•   Round 2:",
+          "size": 12.0,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 0,
+          "y": 447.8699951171875,
+          "all_caps": false,
+          "page": 2,
+          "score": 0.5,
+          "level": "H3"
+        }
+      ]
+    },
+    {
       "text": "Round 1A: Understand Your Document",
-      "page": 3
+      "size": 20.0,
+      "bold": false,
+      "centered": true,
+      "underlined": false,
+      "color": 935520,
+      "y": 76.530029296875,
+      "all_caps": false,
+      "page": 3,
+      "score": 0.9999999999999999,
+      "level": "H1",
+      "children": [
+        {
+          "text": "experiences, like semantic search, recommendation systems, and insight",
+          "size": 14.0,
+          "bold": false,
+          "centered": true,
+          "underlined": false,
+          "color": 0,
+          "y": 358.3500061035156,
+          "all_caps": false,
+          "page": 3,
+          "score": 0.5,
+          "level": "H2",
+          "children": [
+            {
+              "text": "•   Extracts:",
+              "size": 12.0,
+              "bold": false,
+              "centered": false,
+              "underlined": false,
+              "color": 0,
+              "y": 485.8999938964844,
+              "all_caps": false,
+              "page": 3,
+              "score": 0.5,
+              "level": "H3"
+            }
+          ]
+        },
+        {
+          "text": "3.   Sample Dockerfile",
+          "size": 14.0,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 0,
+          "y": 75.030029296875,
+          "all_caps": false,
+          "page": 4,
+          "score": 0.5,
+          "level": "H2"
+        },
+        {
+          "text": "4.   Sample Solution",
+          "size": 14.0,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 0,
+          "y": 92.030029296875,
+          "all_caps": false,
+          "page": 4,
+          "score": 0.5,
+          "level": "H2",
+          "children": [
+            {
+              "text": "•   output.json",
+              "size": 12.0,
+              "bold": false,
+              "centered": false,
+              "underlined": false,
+              "color": 0,
+              "y": 645.4500122070312,
+              "all_caps": false,
+              "page": 4,
+              "score": 0.5,
+              "level": "H3"
+            }
+          ]
+        },
+        {
+          "text": "16 GB RAM configurations",
+          "size": 14.0,
+          "bold": false,
+          "centered": true,
+          "underlined": false,
+          "color": 0,
+          "y": 177.54998779296875,
+          "all_caps": false,
+          "page": 5,
+          "score": 0.5,
+          "level": "H2"
+        },
+        {
+          "text": "deadline, you will be informed, when to make the repo public.",
+          "size": 14.0,
+          "bold": false,
+          "centered": true,
+          "underlined": false,
+          "color": 935520,
+          "y": 92.030029296875,
+          "all_caps": false,
+          "page": 6,
+          "score": 0.0,
+          "level": "H2"
+        }
+      ]
     },
     {
-      "level": "H1",
       "text": "Round 1B: Persona-Driven Document Intelligence",
-      "page": 7
+      "size": 20.0,
+      "bold": false,
+      "centered": true,
+      "underlined": false,
+      "color": 935520,
+      "y": 76.530029296875,
+      "all_caps": false,
+      "page": 7,
+      "score": 0.9999999999999999,
+      "level": "H1",
+      "children": [
+        {
+          "text": "•   Output JSON format: Refer  challenge1b_output.json",
+          "size": 12.666666666666666,
+          "bold": true,
+          "centered": false,
+          "underlined": false,
+          "color": 2121369,
+          "y": 350.1000061035156,
+          "all_caps": false,
+          "page": 8,
+          "score": 0.7,
+          "level": "H3"
+        },
+        {
+          "text": "1.   Metadata:",
+          "size": 14.0,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 0,
+          "y": 412.3699951171875,
+          "all_caps": false,
+          "page": 8,
+          "score": 0.5,
+          "level": "H2",
+          "children": [
+            {
+              "text": "•   Model size  ≤ 1GB",
+              "size": 12.666666666666666,
+              "bold": false,
+              "centered": false,
+              "underlined": false,
+              "color": 0,
+              "y": 685.9500122070312,
+              "all_caps": false,
+              "page": 8,
+              "score": 0.5,
+              "level": "H3"
+            }
+          ]
+        },
+        {
+          "text": "Section Relevance",
+          "size": 14.0,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 0,
+          "y": 379.6199951171875,
+          "all_caps": false,
+          "page": 9,
+          "score": 0.5,
+          "level": "H2"
+        }
+      ]
     },
     {
-      "level": "H1",
       "text": "Appendix:",
-      "page": 10
+      "size": 20.0,
+      "bold": false,
+      "centered": false,
+      "underlined": true,
+      "color": 935520,
+      "y": 138.27069091796875,
+      "all_caps": false,
+      "page": 10,
+      "score": 1.2,
+      "level": "H1"
+    },
+    {
+      "text": "https://github.com/jhaaj08/Adobe-India-",
+      "size": 20.0,
+      "bold": false,
+      "centered": true,
+      "underlined": false,
+      "color": 0,
+      "y": 189.04998779296875,
+      "all_caps": false,
+      "page": 10,
+      "score": 0.8999999999999999,
+      "level": "H1"
+    },
+    {
+      "text": "Hackathon25.git",
+      "size": 20.0,
+      "bold": false,
+      "centered": false,
+      "underlined": false,
+      "color": 0,
+      "y": 217.33001708984375,
+      "all_caps": false,
+      "page": 10,
+      "score": 0.8999999999999999,
+      "level": "H1"
     }
   ]
 }

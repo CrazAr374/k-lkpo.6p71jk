@@ -2,353 +2,800 @@
   "title": "Technology",
   "outline": [
     {
-      "level": "H1",
       "text": "KICKSTART",
-      "page": 1
-    },
-    {
-      "level": "H1",
-      "text": "KICKSTART",
-      "page": 1
-    },
-    {
-      "level": "H1",
-      "text": "DSA AND",
-      "page": 1
-    },
-    {
-      "level": "H1",
-      "text": "DSA AND",
-      "page": 1
-    },
-    {
-      "level": "H1",
-      "text": "FUTURE TECH",
-      "page": 1
-    },
-    {
-      "level": "H1",
-      "text": "FUTURE TECH",
-      "page": 1
-    },
-    {
-      "level": "H1",
-      "text": "STACK",
-      "page": 1
-    },
-    {
-      "level": "H1",
-      "text": "STACK",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": false,
+      "underlined": true,
+      "color": 16777215,
+      "y": 155.2520751953125,
+      "all_caps": true,
       "page": 1,
+      "score": 0.7,
+      "level": "H1"
+    },
+    {
+      "text": "DSA AND",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": false,
+      "underlined": true,
+      "color": 16777215,
+      "y": 241.5020751953125,
+      "all_caps": true,
+      "page": 1,
+      "score": 0.7,
+      "level": "H1"
+    },
+    {
+      "text": "FUTURE TECH",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": false,
+      "underlined": true,
+      "color": 16777215,
+      "y": 327.7520751953125,
+      "all_caps": true,
+      "page": 1,
+      "score": 0.7,
+      "level": "H1"
+    },
+    {
+      "text": "STACK",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": false,
+      "underlined": true,
+      "color": 16777215,
+      "y": 414.0020751953125,
+      "all_caps": true,
+      "page": 1,
+      "score": 0.7,
+      "level": "H1",
       "children": [
         {
-          "level": "H3",
-          "text": "DSA",
-          "page": 2
+          "text": "-ATHARVA RAHATE",
+          "size": 19.994998931884766,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 16777215,
+          "y": 474.6327209472656,
+          "all_caps": true,
+          "page": 1,
+          "score": 0.9000000000000001,
+          "level": "H3"
         },
         {
-          "level": "H3",
           "text": "WHO I AM ?",
-          "page": 2
+          "size": 54.997501373291016,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 1179730,
+          "y": 52.51620864868164,
+          "all_caps": true,
+          "page": 2,
+          "score": 0.9000000000000001,
+          "level": "H3"
         },
         {
-          "level": "H3",
+          "text": "OVERALL CGPA 8.4",
+          "size": 21.242891311645508,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 1179730,
+          "y": 277.4699401855469,
+          "all_caps": true,
+          "page": 2,
+          "score": 0.9000000000000001,
+          "level": "H3"
+        },
+        {
+          "text": "RD",
+          "size": 12.745735168457031,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 1179730,
+          "y": 294.2526550292969,
+          "all_caps": false,
+          "page": 2,
+          "score": 0.7,
+          "level": "H3"
+        },
+        {
+          "text": "YEAR SGPA 9.07",
+          "size": 21.242891311645508,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 1179730,
+          "y": 322.2169189453125,
+          "all_caps": true,
+          "page": 2,
+          "score": 0.9000000000000001,
+          "level": "H3"
+        },
+        {
+          "text": "DSA",
+          "size": 39.60784149169922,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 459562,
+          "y": 376.4450988769531,
+          "all_caps": true,
+          "page": 2,
+          "score": 0.7,
+          "level": "H3"
+        },
+        {
           "text": "Python",
-          "page": 2
-        },
-        {
-          "level": "H3",
-          "text": "01. Intervee",
-          "page": 3
-        },
-        {
-          "level": "H3",
-          "text": "02. Expenza ai",
-          "page": 3
-        },
-        {
-          "level": "H3",
-          "text": "03. StegaShield",
-          "page": 3
+          "size": 39.60784149169922,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 459562,
+          "y": 578.67431640625,
+          "all_caps": false,
+          "page": 2,
+          "score": 0.5,
+          "level": "H3"
         }
       ]
     },
     {
-      "level": "H1",
       "text": "PROJECTS",
-      "page": 3
-    },
-    {
-      "level": "H1",
-      "text": "PROJECTS",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": false,
+      "underlined": true,
+      "color": 16777215,
+      "y": 90.95548248291016,
+      "all_caps": true,
       "page": 3,
+      "score": 1.0,
+      "level": "H1",
       "children": [
         {
-          "level": "H3",
-          "text": "WAS DSA HELPFUL IN THESE?",
-          "page": 3
+          "text": "01. Intervee",
+          "size": 60.0,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 124.46755981445312,
+          "all_caps": false,
+          "page": 3,
+          "score": 0.8,
+          "level": "H3"
         },
         {
-          "level": "H3",
-          "text": "WAS DSA HELPFUL IN THESE?",
-          "page": 3
+          "text": "02. Expenza ai",
+          "size": 60.0,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 315.09161376953125,
+          "all_caps": false,
+          "page": 3,
+          "score": 0.8,
+          "level": "H3"
         },
         {
-          "level": "H3",
+          "text": "03. StegaShield",
+          "size": 60.0,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 515.4656982421875,
+          "all_caps": false,
+          "page": 3,
+          "score": 0.8,
+          "level": "H3"
+        },
+        {
+          "text": "WAS DSA HELPFUL IN THESE?",
+          "size": 33.997501373291016,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 16777215,
+          "y": 561.2340698242188,
+          "all_caps": true,
+          "page": 3,
+          "score": 0.5,
+          "level": "H3"
+        },
+        {
           "text": "YEAHHHHHHHHHHHHHHH!!!!!!!!!!!!!",
-          "page": 3
+          "size": 25.094999313354492,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 610.1901245117188,
+          "all_caps": true,
+          "page": 3,
+          "score": 0.5,
+          "level": "H3"
         },
         {
-          "level": "H2",
           "text": "WHAT IS DSA???",
-          "page": 4
+          "size": 69.99749755859375,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 5976858,
+          "y": 101.5743637084961,
+          "all_caps": true,
+          "page": 4,
+          "score": 0.9000000000000001,
+          "level": "H2"
         },
         {
-          "level": "H2",
           "text": "LANGUAGE?",
+          "size": 69.99749755859375,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 69.77326202392578,
+          "all_caps": true,
           "page": 5,
+          "score": 0.7,
+          "level": "H2",
           "children": [
             {
-              "level": "H3",
-              "text": "01. Java",
-              "page": 6
+              "text": "Beginner friendly and super readable",
+              "size": 21.645000457763672,
+              "bold": false,
+              "centered": true,
+              "underlined": true,
+              "color": 5976858,
+              "y": 558.8905029296875,
+              "all_caps": false,
+              "page": 5,
+              "score": 0.5,
+              "level": "H3"
+            },
+            {
+              "text": "Python helps you focus on solving the",
+              "size": 21.645000457763672,
+              "bold": false,
+              "centered": true,
+              "underlined": true,
+              "color": 5976858,
+              "y": 588.8905029296875,
+              "all_caps": false,
+              "page": 5,
+              "score": 0.5,
+              "level": "H3"
+            },
+            {
+              "text": "Great for learning DSA concepts fast",
+              "size": 21.645000457763672,
+              "bold": false,
+              "centered": true,
+              "underlined": true,
+              "color": 5976858,
+              "y": 648.8905029296875,
+              "all_caps": false,
+              "page": 5,
+              "score": 0.5,
+              "level": "H3"
             }
           ]
         }
       ]
     },
     {
-      "level": "H1",
       "text": "INDUSTRY USE",
-      "page": 6
-    },
-    {
-      "level": "H1",
-      "text": "INDUSTRY USE",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 16777215,
+      "y": 52.26201629638672,
+      "all_caps": true,
       "page": 6,
+      "score": 0.9000000000000001,
+      "level": "H1",
       "children": [
         {
-          "level": "H3",
+          "text": "01. Java",
+          "size": 60.0,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 159.8080291748047,
+          "all_caps": false,
+          "page": 6,
+          "score": 0.8,
+          "level": "H3"
+        },
+        {
+          "text": "Powers enterprise applications, Android development, backend systems (Spring),",
+          "size": 30.0,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 5976858,
+          "y": 248.7335662841797,
+          "all_caps": false,
+          "page": 6,
+          "score": 0.5,
+          "level": "H3"
+        },
+        {
+          "text": "cloud-based tools, financial services, and large-scale distributed systems due to its",
+          "size": 30.0,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 5976858,
+          "y": 279.4835510253906,
+          "all_caps": false,
+          "page": 6,
+          "score": 0.5,
+          "level": "H3"
+        },
+        {
           "text": "02. Python",
-          "page": 6
+          "size": 60.0,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 374.44012451171875,
+          "all_caps": false,
+          "page": 6,
+          "score": 0.8,
+          "level": "H3"
         },
         {
-          "level": "H3",
+          "text": "Used extensively in machine learning, data science, automation, backend",
+          "size": 30.0,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 5976858,
+          "y": 461.244384765625,
+          "all_caps": false,
+          "page": 6,
+          "score": 0.5,
+          "level": "H3"
+        },
+        {
+          "text": "development, web scraping, testing, and scripting thanks to its simplicity and vast",
+          "size": 30.0,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 5976858,
+          "y": 491.9944152832031,
+          "all_caps": false,
+          "page": 6,
+          "score": 0.5,
+          "level": "H3"
+        },
+        {
           "text": "03. C++",
-          "page": 6
+          "size": 60.0,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 586.6561279296875,
+          "all_caps": true,
+          "page": 6,
+          "score": 1.0,
+          "level": "H3"
+        },
+        {
+          "text": "Commonly used in game development (Unreal Engine), operating systems",
+          "size": 30.0,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 5976858,
+          "y": 673.4996337890625,
+          "all_caps": false,
+          "page": 6,
+          "score": 0.5,
+          "level": "H3"
+        },
+        {
+          "text": "(Windows/Linux), competitive programming, embedded systems, and performance-",
+          "size": 30.0,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 5976858,
+          "y": 704.2496337890625,
+          "all_caps": false,
+          "page": 6,
+          "score": 0.5,
+          "level": "H3"
         }
       ]
     },
     {
-      "level": "H1",
       "text": "SERVICE BASED",
-      "page": 7
-    },
-    {
-      "level": "H1",
-      "text": "SERVICE BASED",
-      "page": 7
-    },
-    {
-      "level": "H1",
-      "text": "PRODUCT BASED",
-      "page": 7
-    },
-    {
-      "level": "H1",
-      "text": "PRODUCT BASED",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 16777215,
+      "y": 47.65477752685547,
+      "all_caps": true,
       "page": 7,
+      "score": 0.9000000000000001,
+      "level": "H1"
+    },
+    {
+      "text": "PRODUCT BASED",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 16777215,
+      "y": 133.90478515625,
+      "all_caps": true,
+      "page": 7,
+      "score": 0.9000000000000001,
+      "level": "H1",
       "children": [
         {
-          "level": "H3",
-          "text": "Aspect",
-          "page": 7
+          "text": "domains",
+          "size": 19.994998931884766,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 0,
+          "y": 423.6954345703125,
+          "all_caps": false,
+          "page": 7,
+          "score": 0.6000000000000001,
+          "level": "H3"
         },
         {
-          "level": "H3",
-          "text": "Service-Based Companies",
-          "page": 7
-        },
-        {
-          "level": "H3",
-          "text": "Product-Based Companies",
-          "page": 7
-        },
-        {
-          "level": "H3",
-          "text": "Business Model",
-          "page": 7
-        },
-        {
-          "level": "H3",
-          "text": "Examples",
-          "page": 7
-        },
-        {
-          "level": "H3",
-          "text": "Work Nature",
-          "page": 7
-        },
-        {
-          "level": "H3",
-          "text": "Learning Curve",
-          "page": 7
-        },
-        {
-          "level": "H3",
-          "text": "Tech Stack",
-          "page": 7
-        },
-        {
-          "level": "H3",
-          "text": "Salary & Benefits",
-          "page": 7
-        },
-        {
-          "level": "H3",
-          "text": "Work Pressure",
-          "page": 7
-        },
-        {
-          "level": "H3",
-          "text": "Career Growth",
-          "page": 7
+          "text": "progression",
+          "size": 19.994998931884766,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 0,
+          "y": 736.2008666992188,
+          "all_caps": false,
+          "page": 7,
+          "score": 0.6000000000000001,
+          "level": "H3"
         }
       ]
     },
     {
-      "level": "H1",
       "text": "PATTERNS IN DSA",
-      "page": 8
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 16777215,
+      "y": 44.19989776611328,
+      "all_caps": true,
+      "page": 8,
+      "score": 0.9000000000000001,
+      "level": "H1"
     },
     {
-      "level": "H1",
-      "text": "PATTERNS IN DSA",
-      "page": 8
-    },
-    {
-      "level": "H1",
       "text": "LETS SEE SOME",
-      "page": 9
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 5976858,
+      "y": 72.9451675415039,
+      "all_caps": true,
+      "page": 9,
+      "score": 0.9000000000000001,
+      "level": "H1"
     },
     {
-      "level": "H1",
       "text": "PROBLEMS",
-      "page": 9
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 5976858,
+      "y": 159.19515991210938,
+      "all_caps": true,
+      "page": 9,
+      "score": 0.9000000000000001,
+      "level": "H1"
     },
     {
-      "level": "H1",
       "text": "FUTURE",
-      "page": 10
-    },
-    {
-      "level": "H1",
-      "text": "FUTURE",
-      "page": 10
-    },
-    {
-      "level": "H1",
-      "text": "TECH STACK",
-      "page": 10
-    },
-    {
-      "level": "H1",
-      "text": "TECH STACK",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": false,
+      "underlined": true,
+      "color": 16777215,
+      "y": 64.12960052490234,
+      "all_caps": true,
       "page": 10,
+      "score": 0.7,
+      "level": "H1"
+    },
+    {
+      "text": "TECH STACK",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": false,
+      "underlined": true,
+      "color": 16777215,
+      "y": 150.37960815429688,
+      "all_caps": true,
+      "page": 10,
+      "score": 0.7,
+      "level": "H1",
       "children": [
         {
-          "level": "H3",
+          "text": "1.AI (with TensorFlow, PyTorch),",
+          "size": 27.997501373291016,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 295.4987487792969,
+          "all_caps": false,
+          "page": 10,
+          "score": 0.6000000000000001,
+          "level": "H3"
+        },
+        {
           "text": "2.Web3 (Solidity, Ethereum),",
-          "page": 10
+          "size": 27.997501373291016,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 325.4987487792969,
+          "all_caps": false,
+          "page": 10,
+          "score": 0.6000000000000001,
+          "level": "H3"
         },
         {
-          "level": "H3",
+          "text": "3.Modern web tools (React, Next.js),",
+          "size": 27.997501373291016,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 355.4987487792969,
+          "all_caps": false,
+          "page": 10,
+          "score": 0.6000000000000001,
+          "level": "H3"
+        },
+        {
+          "text": "4.Automation (n8n),",
+          "size": 27.997501373291016,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 385.4987487792969,
+          "all_caps": false,
+          "page": 10,
+          "score": 0.8,
+          "level": "H3"
+        },
+        {
+          "text": "5.cybersecurity (Kali Linux, Burp Suite) to",
+          "size": 27.997501373291016,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 415.4987487792969,
+          "all_caps": false,
+          "page": 10,
+          "score": 0.6000000000000001,
+          "level": "H3"
+        },
+        {
           "text": "WHAT TO LEARN NEXT ???",
-          "page": 10
+          "size": 30.0,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 16777215,
+          "y": 555.7174072265625,
+          "all_caps": true,
+          "page": 10,
+          "score": 0.5,
+          "level": "H3"
         },
         {
-          "level": "H3",
-          "text": "WHAT TO LEARN NEXT ???",
-          "page": 10
+          "text": "Python for ai",
+          "size": 26.99250030517578,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 585.5474853515625,
+          "all_caps": false,
+          "page": 10,
+          "score": 0.5,
+          "level": "H3"
         },
         {
-          "level": "H2",
           "text": "IF ANY DOUBTS CONNECT",
-          "page": 11
+          "size": 69.99749755859375,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 16777215,
+          "y": 97.5360336303711,
+          "all_caps": true,
+          "page": 11,
+          "score": 0.7000000000000001,
+          "level": "H2"
         },
         {
-          "level": "H2",
-          "text": "IF ANY DOUBTS CONNECT",
-          "page": 11
-        },
-        {
-          "level": "H2",
           "text": "ME ON LINKEDIN",
-          "page": 11
-        },
-        {
-          "level": "H2",
-          "text": "ME ON LINKEDIN",
-          "page": 11
+          "size": 69.99749755859375,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 16777215,
+          "y": 172.53604125976562,
+          "all_caps": true,
+          "page": 11,
+          "score": 0.9000000000000001,
+          "level": "H2"
         }
       ]
     },
     {
-      "level": "H1",
       "text": "RESOURCES THAT I USE",
-      "page": 12
-    },
-    {
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 5976858,
+      "y": 122.16028594970703,
+      "all_caps": true,
+      "page": 12,
+      "score": 0.9000000000000001,
       "level": "H1",
-      "text": "ANY DOUBTS",
-      "page": 13
-    },
-    {
-      "level": "H1",
-      "text": "ANY DOUBTS",
-      "page": 13
-    },
-    {
-      "level": "H1",
-      "text": "ABOUT",
-      "page": 13
-    },
-    {
-      "level": "H1",
-      "text": "ABOUT",
-      "page": 13
-    },
-    {
-      "level": "H1",
-      "text": "ANYTHING ?",
-      "page": 13
-    },
-    {
-      "level": "H1",
-      "text": "ANYTHING ?",
-      "page": 13
-    },
-    {
-      "level": "H1",
-      "text": "THANKYOU !!!!",
-      "page": 13
-    },
-    {
-      "level": "H1",
-      "text": "THANKYOU !!!!",
-      "page": 13,
       "children": [
         {
-          "level": "H3",
-          "text": "FEEL FREE TO REACH OUT......",
-          "page": 13
+          "text": "IF MORE RESOURCES",
+          "size": 22.61318016052246,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 659.0121459960938,
+          "all_caps": true,
+          "page": 12,
+          "score": 0.7,
+          "level": "H3"
         },
         {
-          "level": "H3",
-          "text": "FEEL FREE TO REACH OUT......",
-          "page": 13
+          "text": "NEEDED PLEASE",
+          "size": 22.61318016052246,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 683.1279296875,
+          "all_caps": true,
+          "page": 12,
+          "score": 0.7,
+          "level": "H3"
+        },
+        {
+          "text": "REACH OUT ON",
+          "size": 22.61318016052246,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 707.2437133789062,
+          "all_caps": true,
+          "page": 12,
+          "score": 0.7,
+          "level": "H3"
+        },
+        {
+          "text": "LINKEDIN",
+          "size": 22.61318016052246,
+          "bold": false,
+          "centered": false,
+          "underlined": true,
+          "color": 5976858,
+          "y": 731.3594970703125,
+          "all_caps": true,
+          "page": 12,
+          "score": 0.7,
+          "level": "H3"
         }
       ]
+    },
+    {
+      "text": "ANY DOUBTS",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 16777215,
+      "y": 158.12863159179688,
+      "all_caps": true,
+      "page": 13,
+      "score": 0.9000000000000001,
+      "level": "H1"
+    },
+    {
+      "text": "ABOUT",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 16777215,
+      "y": 244.37863159179688,
+      "all_caps": true,
+      "page": 13,
+      "score": 0.9000000000000001,
+      "level": "H1"
+    },
+    {
+      "text": "ANYTHING ?",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 16777215,
+      "y": 330.6286315917969,
+      "all_caps": true,
+      "page": 13,
+      "score": 0.9000000000000001,
+      "level": "H1",
+      "children": [
+        {
+          "text": "FEEL FREE TO REACH OUT......",
+          "size": 39.997501373291016,
+          "bold": false,
+          "centered": true,
+          "underlined": true,
+          "color": 16777215,
+          "y": 548.7578735351562,
+          "all_caps": true,
+          "page": 13,
+          "score": 0.7000000000000001,
+          "level": "H3"
+        }
+      ]
+    },
+    {
+      "text": "THANKYOU !!!!",
+      "size": 79.99500274658203,
+      "bold": false,
+      "centered": true,
+      "underlined": true,
+      "color": 16777215,
+      "y": 633.5416259765625,
+      "all_caps": true,
+      "page": 13,
+      "score": 0.9000000000000001,
+      "level": "H1"
     }
   ]
 }

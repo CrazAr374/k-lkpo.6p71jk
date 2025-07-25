@@ -1,0 +1,111 @@
+{
+  "title": "Functionality test case Practical 2 STQA",
+  "outline": [
+    {
+      "text": "Functionality test case Practical 2 STQA",
+      "size": 21.959999084472656,
+      "bold": false,
+      "centered": true,
+      "underlined": false,
+      "color": 0,
+      "y": 74.99002075195312,
+      "all_caps": false,
+      "page": 1,
+      "score": 1.2,
+      "level": "H1",
+      "children": [
+        {
+          "text": "Functional Test Cases",
+          "size": 11.039999961853027,
+          "bold": false,
+          "centered": true,
+          "underlined": false,
+          "color": 0,
+          "y": 117.3800048828125,
+          "all_caps": false,
+          "page": 1,
+          "score": 0.6000000000000001,
+          "level": "H2"
+        },
+        {
+          "text": "Positive",
+          "size": 11.039999961853027,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 0,
+          "y": 132.260009765625,
+          "all_caps": false,
+          "page": 1,
+          "score": 0.6000000000000001,
+          "level": "H2"
+        },
+        {
+          "text": "Negative",
+          "size": 11.039999961853027,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 0,
+          "y": 233.92999267578125,
+          "all_caps": false,
+          "page": 1,
+          "score": 0.6000000000000001,
+          "level": "H2"
+        },
+        {
+          "text": "Verify if the user can access the payment gateway after adding iteam to cart",
+          "size": 11.039999961853027,
+          "bold": false,
+          "centered": true,
+          "underlined": false,
+          "color": 0,
+          "y": 291.6499938964844,
+          "all_caps": false,
+          "page": 1,
+          "score": 0.6000000000000001,
+          "level": "H2"
+        },
+        {
+          "text": "Usability Testing",
+          "size": 11.039999961853027,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 0,
+          "y": 306.5299987792969,
+          "all_caps": false,
+          "page": 1,
+          "score": 0.6000000000000001,
+          "level": "H2"
+        },
+        {
+          "text": "Functional",
+          "size": 11.039999961853027,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 0,
+          "y": 393.6700134277344,
+          "all_caps": false,
+          "page": 1,
+          "score": 0.6000000000000001,
+          "level": "H2"
+        },
+        {
+          "text": "Atharva Rahate Roll no 47",
+          "size": 11.039999961853027,
+          "bold": false,
+          "centered": false,
+          "underlined": false,
+          "color": 4485572,
+          "y": 466.8999938964844,
+          "all_caps": false,
+          "page": 1,
+          "score": 0.5,
+          "level": "H2"
+        }
+      ]
+    }
+  ]
+}

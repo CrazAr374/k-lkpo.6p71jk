@@ -6,15 +6,36 @@ This project is a high-performance, Docker-based, offline solution for extractin
 
 This solution uses the `PyMuPDF` library, renowned for its speed and accuracy, to ensure fast and reliable text extraction. The core of the solution is a Python script that intelligently identifies headings without relying on network-based AI models, adhering strictly to the offline constraint.
 
-1.  **High-Performance Text & Font Analysis**: The script uses `PyMuPDF` to extract not just the text from each page, but also crucial metadata like font size and style (e.g., bold). This is far more reliable than plain text analysis.
+### Key Features (v2)
 
-2.  **Statistical Heading Detection**: Before processing, the script first analyzes the entire document to find the most common font size, which it determines to be the `body` text size. Any text significantly larger than this is considered a potential heading. This statistical approach makes the detection robust across different document styles.
+1.  **Weighted, Multilingual Heading Detection**: The script uses a composite scoring system for each line, considering font size, boldness, centering, section patterns, and multilingual heading keywords (English, Spanish, French, Hindi, and more). This ensures robust detection across diverse document styles and languages.
 
-3.  **Intelligent Filtering**: A set of heuristics (e.g., checking line length, capitalization, and looking for section numbering like "1.1" or "A.") is applied to filter out non-heading text, ensuring that elements like page numbers or short phrases are not mistakenly identified as headings.
+2.  **Statistical Font Analysis**: The script analyzes the entire document to find the most common font size (body text baseline). Heading levels (H1, H2, H3) are assigned by clustering font sizes relative to this baseline, making the detection adaptive to each PDF.
 
-4.  **Hierarchical Structuring**: Headings are classified into H1, H2, and H3 based on their relative font sizes. The script then builds a logical hierarchy, correctly nesting subheadings under their parent headings. It can also gracefully handle "orphan" headings by placing them logically in the outline.
+3.  **Intelligent Filtering & Deduplication**: Heuristics filter out non-headings (e.g., page numbers, short/long lines, lines ending with periods). Headings are deduplicated by normalized text, and only the first occurrence is kept.
 
-5.  **Offline and Self-Contained**: All dependencies (`PyMuPDF`) are listed in `requirements.txt` and installed within the Docker container. The solution runs entirely on the CPU and has no network dependencies, making it fully compliant with the offline execution requirement.
+4.  **Improved Title Extraction**: The script uses a 3-tier fallback: (1) PDF metadata, (2) largest font text on page 1, (3) centered bold text in the top 20% of page 1, and finally falls back to "Untitled Document" if needed.
+
+5.  **Flat Outline Output**: The output is a flat list of headings (not nested), each with its level (H1, H2, H3), text, and page number, matching the required format.
+
+6.  **Multilingual & Unicode Support**: All text is normalized using Unicode standards, and output JSON is written with `ensure_ascii=False` to preserve all characters.
+
+7.  **Offline and Self-Contained**: All dependencies (`PyMuPDF`) are listed in `requirements.txt` and installed within the Docker container. The solution runs entirely on the CPU and has no network dependencies, making it fully compliant with the offline execution requirement.
+
+## Output Format
+
+Example output for a PDF:
+
+```
+{
+  "title": "Understanding AI",
+  "outline": [
+    { "level": "H1", "text": "Introduction", "page": 1 },
+    { "level": "H2", "text": "What is AI?", "page": 2 },
+    { "level": "H3", "text": "History of AI", "page": 3 }
+  ]
+}
+```
 
 ## How to Build and Run
 
