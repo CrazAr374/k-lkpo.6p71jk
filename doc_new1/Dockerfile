@@ -16,4 +16,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY process.py .
 
 # Command to run the application
-CMD ["python", "process.py"]
+CMD ["python", "process.py"] 
