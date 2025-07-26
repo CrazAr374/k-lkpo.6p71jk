@@ -1,37 +1,51 @@
 # Challenge 1A – PDF Outline Extractor
 
-## Overview
+## What the Model Does
 
-This project is designed to intelligently extract a structured outline (headings and subheadings) from PDF documents. It uses a hybrid scoring method that combines visual features (like font size and boldness) with textual cues (like multilingual heading keywords) to identify sections accurately, even in complex or multilingual PDFs.
+This solution extracts a structured outline from any PDF file by detecting headings and subheadings and organizing them into a hierarchical format (H1, H2, H3). It is built using a **hybrid scoring model** that leverages both **layout-based cues** (such as font size, boldness, and position) and **textual signals** (such as multilingual keywords and common patterns).
 
-The tool is built to be lightweight, fast, and effective even when processing diverse types of documents like academic papers, resumes, or scanned materials with embedded text.
+The final output is a clean JSON file representing the detected document structure. It works effectively across a wide variety of documents including academic papers, resumes, scanned text documents, and multilingual content.
+
 ---
+
+## Why It’s Better Than Baseline
+
+| Feature                      | Our Solution                           | Baseline Approaches               |
+| ---------------------------- | -------------------------------------- | --------------------------------- |
+| **Heading Detection Method** | Hybrid (visual + keyword-based)        | Mostly visual or rule-based       |
+| **Multilingual Capability**  | Yes (English, Hindi, Japanese, etc.)   | Often English-only                |
+| **Fallback Logic**           | Yes, ensures partial output always     | May fail silently on noisy PDFs   |
+| **Offline Support**          | Fully offline, no API required         | Some rely on external services    |
+| **Containerization**         | Fully Dockerized and portable          | May require system-specific setup |
+| **Hierarchy Construction**   | Yes, clean JSON tree with H1-H3 levels | Flat or loosely structured        |
+
+---
+
 ## How It Works
 
-The solution works by processing each page of a PDF and identifying potential headings using a mix of layout-based and keyword-based logic. Here's a simplified breakdown:
+1. **Text and Feature Extraction**
+   Each page is processed using PyMuPDF to extract text, formatting styles (bold, underline), font sizes, and positional information.
 
-1. **Text Extraction**:
-   The tool uses `PyMuPDF` to extract text, font sizes, formatting flags (like bold and underlined), and position information from every line of every page.
+2. **Hybrid Heading Scoring**
+   A score is assigned to each line using a set of weighted heuristics:
 
-2. **Hybrid Heading Scoring**:
-   For each line of text, it calculates a "heading score" based on:
+   * Font size vs. body text size
+   * Formatting: bold, underlined, all-caps
+   * Centered alignment
+   * Heading patterns (e.g., numbered titles)
+   * Keyword match in multiple languages
 
-   * Font size relative to the body text
-   * Bold, centered, underlined, or colored text
-   * Capitalization (all-caps headings)
-   * Pattern-based cues (like numbered headings)
-   * Presence of heading keywords (supports English, Hindi, French, Spanish, Japanese, etc.)
+3. **Heading Classification and Nesting**
+   Headings are assigned to H1, H2, or H3 based on font size clusters. Then they are nested into a tree structure according to layout flow and page order.
 
-3. **Heading Hierarchy Construction**:
+4. **Title Inference**
+   If metadata is available, it uses that; otherwise, it selects the topmost large-sized, bold-centered line on the first page.
 
-   * Scores are used to classify lines as H1, H2, or H3.
-   * Headings are grouped into a nested hierarchy based on size and page layout.
-   * Fallback logic ensures some output even when documents lack strong structure.
+5. **JSON Output**
+   For each PDF, the output JSON includes:
 
-4. **Output**:
-
-   * Each PDF produces a JSON file with extracted heading hierarchy (`H1`, `H2`, and `H3`).
-   * Title is inferred from metadata, font size, or top of the first page.
+   * `title`: inferred title of the document
+   * `outline`: structured headings with formatting, page number, and hierarchy level
 
 ---
 
@@ -39,19 +53,18 @@ The solution works by processing each page of a PDF and identifying potential he
 
 ```
 challenge1a/
-│
-├── Dockerfile              # Docker setup for building and running the tool
-├── requirements.txt        # Python package dependencies
-├── process.py              # Main logic for heading extraction
-├── input/                  # Folder to store PDF files to be processed
-│   └── your_file.pdf
-├── output/                 # Extracted heading outline in JSON format
-│   └── your_file.json
+├── Dockerfile            # Docker build configuration
+├── requirements.txt      # Python dependencies
+├── process.py            # Main script to extract headings
+├── input/                # Add your PDF files here
+│   └── sample.pdf
+├── output/               # JSON output files will be saved here
+│   └── sample.json
 ```
 
 ---
 
-## Quick Start
+## Quick Usage Instructions
 
 ### Step 1: Build the Docker Image
 
@@ -59,11 +72,11 @@ challenge1a/
 docker build -t pdf-outline-extractor .
 ```
 
-### Step 2: Prepare Input Files
+### Step 2: Add PDF Files
 
-* Place one or more PDF files into the `input/` folder.
+Place one or more PDF files into the `input/` folder.
 
-### Step 3: Run the Extractor
+### Step 3: Run the Extraction
 
 ```bash
 docker run --rm \
@@ -74,12 +87,11 @@ docker run --rm \
 
 ### Step 4: View Output
 
-* Navigate to the `output/` folder to see the JSON files, one per input PDF.
-* Each JSON contains structured headings and their assigned levels (H1, H2, H3), including page numbers and formatting info.
+Output files will be saved as `.json` in the `output/` folder. Each contains the heading hierarchy.
 
 ---
 
-## Example Output
+## Example Output (JSON)
 
 ```json
 {
@@ -111,32 +123,32 @@ docker run --rm \
 
 ## Key Features
 
-* **Hybrid Heading Scoring**: Blends layout and language signals for better accuracy.
-* **Multilingual Support**: Recognizes headings in English, Hindi, Spanish, French, Japanese.
-* **Offline, Lightweight Design**: No internet required after Docker build. Very low memory footprint.
-* **Fallback Resilience**: Produces partial output even in poorly structured or noisy PDFs.
-* **Fully Containerized**: Easy to run on any platform with Docker.
+* **Hybrid Scoring**: Uses both layout and content patterns
+* **Language-Aware**: Supports English, Hindi, Japanese, Spanish, and French
+* **Resilient Output**: Generates meaningful JSON even with noisy or inconsistent documents
+* **Lightweight**: Runs fully offline and has low memory usage
+* **Dockerized**: Portable and consistent across platforms
 
 ---
 
-## Requirements
+## Requirements (For Local Use)
 
-Install Python packages using:
+If not using Docker:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**Key Libraries:**
+### Dependencies:
 
-* `PyMuPDF` (fitz) for PDF parsing
-* `unicodedata`, `re`, `json` for string handling
-* `collections` for efficient data grouping
+* `PyMuPDF (fitz)`
+* `unicodedata`, `json`, `re`, `collections`
 
 ---
 
 ## Performance
 
-* Processes \~3–5 PDFs in under 5 seconds each
-* Memory usage under 100 MB
-* JSON output size: minimal and structured
+* Processes 3–5 PDFs in under 5 seconds each
+* Memory usage remains under 100 MB
+* Output JSON is compact, typically under 200 KB per document
+
