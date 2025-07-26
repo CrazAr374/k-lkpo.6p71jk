@@ -2,35 +2,35 @@
   "metadata": {
     "input_documents": [
       "6874faecd848a_Adobe_India_Hackathon_-_Challenge_Doc.pdf",
-      "AtharvaRahate_resume.pdf",
-      "certificates.pdf",
       "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf"
     ],
     "persona": "Data Scientist at a Financial Technology Startup",
     "job_to_be_done": "Identify innovative applications of machine learning for fraud detection and customer risk profiling in financial transactions",
-    "processing_timestamp": "2025-07-26T08:24:59.249495"
+    "processing_timestamp": "2025-07-26T09:52:19.877154"
   },
   "extracted_sections": [
     {
       "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
       "page": 7,
       "section_title": "2. Related Work / Literature Survey",
-      "importance_rank": 0.436,
+      "importance_rank": 0.426,
       "keywords": [
         "detection",
         "public",
+        "fund",
         "monitoring",
-        "system",
-        "anomaly"
+        "system"
       ],
       "summary": "\"AI-Based Public Fund Monitoring System\" – IEEE, 2023: Demonstrated a 60% improvement in fraud detection through the use of machine learning and anomaly detection models in government finance systems.",
       "sub_sections": [
         {
+          "rank": 1,
           "refined_text": "\"AI-Based Public Fund Monitoring System\" – IEEE, 2023: Demonstrated a 60% improvement in fraud detection through the use of machine learning and anomaly detection models in government finance systems.",
           "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
           "page": 7
         },
         {
+          "rank": 1,
           "refined_text": "Limitations of Existing Systems: Current e-Governance portals and dashboards offer basic visualization and static reports but lack real-time anomaly detection, predictive insights.",
           "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
           "page": 7
@@ -39,35 +39,9 @@
     },
     {
       "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-      "page": 8,
-      "section_title": "3. Proposed Methodology / Prototype / Idea / Algorithm",
-      "importance_rank": 0.272,
-      "keywords": [
-        "models",
-        "data",
-        "computer",
-        "receipts",
-        "reports"
-      ],
-      "summary": "Natural Language Processing (NLP): Analyzes fund reports, policies, and audit documents for Anomaly Detection (ML Models): Identifies irregular or suspicious expenditures using machine learning Predictive Analytics: Forecasts future fund requirements, delays, and risks using AI models.",
-      "sub_sections": [
-        {
-          "refined_text": "Natural Language Processing (NLP): Analyzes fund reports, policies, and audit documents for Anomaly Detection (ML Models): Identifies irregular or suspicious expenditures using machine learning Predictive Analytics: Forecasts future fund requirements, delays, and risks using AI models.",
-          "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-          "page": 8
-        },
-        {
-          "refined_text": "PVG’s COE&SSDIOM Nashik | Department of Computer Engineering Data Integration: Collects structured and unstructured data like budgets, invoices, receipts, and reports from various government sources.",
-          "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-          "page": 8
-        }
-      ]
-    },
-    {
-      "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
       "page": 11,
       "section_title": "Rani, P. et al. (2022). Machine Learning for Government Budget Analysis. Springer.",
-      "importance_rank": 0.254,
+      "importance_rank": 0.306,
       "keywords": [
         "https",
         "gov",
@@ -78,14 +52,38 @@
       "summary": "GOI Budget Analytics Portal – https://www.indiabudget.gov.in/ Open Government Data Platform – https://data.gov.in/ Choudhary, S., & Mehta, K.",
       "sub_sections": [
         {
+          "rank": 2,
           "refined_text": "GOI Budget Analytics Portal – https://www.indiabudget.gov.in/ Open Government Data Platform – https://data.gov.in/ Choudhary, S., & Mehta, K.",
           "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
           "page": 11
+        }
+      ]
+    },
+    {
+      "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
+      "page": 8,
+      "section_title": "3. Proposed Methodology / Prototype / Idea / Algorithm",
+      "importance_rank": 0.249,
+      "keywords": [
+        "models",
+        "data",
+        "reports",
+        "fund",
+        "computer"
+      ],
+      "summary": "Natural Language Processing (NLP): Analyzes fund reports, policies, and audit documents for Anomaly Detection (ML Models): Identifies irregular or suspicious expenditures using machine learning Predictive Analytics: Forecasts future fund requirements, delays, and risks using AI models.",
+      "sub_sections": [
+        {
+          "rank": 3,
+          "refined_text": "Natural Language Processing (NLP): Analyzes fund reports, policies, and audit documents for Anomaly Detection (ML Models): Identifies irregular or suspicious expenditures using machine learning Predictive Analytics: Forecasts future fund requirements, delays, and risks using AI models.",
+          "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
+          "page": 8
         },
         {
-          "refined_text": "NLP Applications in Public Finance Systems.",
+          "rank": 3,
+          "refined_text": "PVG’s COE&SSDIOM Nashik | Department of Computer Engineering Data Integration: Collects structured and unstructured data like budgets, invoices, receipts, and reports from various government sources.",
           "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-          "page": 11
+          "page": 8
         }
       ]
     },
@@ -93,105 +91,73 @@
       "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
       "page": 10,
       "section_title": "The proposed AI-based fund monitoring system brings a transformative shift in how government",
-      "importance_rank": 0.174,
+      "importance_rank": 0.236,
       "keywords": [
         "system",
-        "fund",
-        "funds",
-        "tracked",
-        "analyzed"
+        "financial",
+        "governance",
+        "making",
+        "intelligent"
       ],
       "summary": "By integrating advanced technologies like machine learning, OCR, NLP, and predictive analytics, the system enables real-time monitoring of financial activities and detects anomalies with high accuracy.",
       "sub_sections": [
         {
+          "rank": 4,
           "refined_text": "By integrating advanced technologies like machine learning, OCR, NLP, and predictive analytics, the system enables real-time monitoring of financial activities and detects anomalies with high accuracy.",
           "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
           "page": 10
         },
         {
-          "refined_text": "It addresses the long-standing issues of delayed reporting, lack of transparency, and manual auditing errors, ensuring proactive governance and data-driven decision-making.",
+          "rank": 4,
+          "refined_text": "Furthermore, the incorporation of forecasting capabilities helps in identifying future fund requirements and misuse risks, allowing better planning and optimized allocation of resources.",
           "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
           "page": 10
-        }
-      ]
-    },
-    {
-      "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-      "page": 5,
-      "section_title": "1. Build an AI-based system to monitor real-time government",
-      "importance_rank": 0.07,
-      "keywords": [
-        "fund",
-        "using",
-        "expenditure",
-        "detect",
-        "anomalies"
-      ],
-      "summary": "Detect anomalies and irregularities in fund usage using machine learning.",
-      "sub_sections": [
-        {
-          "refined_text": "Detect anomalies and irregularities in fund usage using machine learning.",
-          "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-          "page": 5
-        },
-        {
-          "refined_text": "Forecast future fund requirements and misuse risks using predictive analytics.",
-          "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-          "page": 5
         }
       ]
     }
   ],
   "subsection_analysis": [
     {
+      "rank": 1,
       "refined_text": "\"AI-Based Public Fund Monitoring System\" – IEEE, 2023: Demonstrated a 60% improvement in fraud detection through the use of machine learning and anomaly detection models in government finance systems.",
       "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
       "page": 7
     },
     {
+      "rank": 1,
       "refined_text": "Limitations of Existing Systems: Current e-Governance portals and dashboards offer basic visualization and static reports but lack real-time anomaly detection, predictive insights.",
       "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
       "page": 7
     },
     {
-      "refined_text": "Natural Language Processing (NLP): Analyzes fund reports, policies, and audit documents for Anomaly Detection (ML Models): Identifies irregular or suspicious expenditures using machine learning Predictive Analytics: Forecasts future fund requirements, delays, and risks using AI models.",
-      "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-      "page": 8
-    },
-    {
-      "refined_text": "PVG’s COE&SSDIOM Nashik | Department of Computer Engineering Data Integration: Collects structured and unstructured data like budgets, invoices, receipts, and reports from various government sources.",
-      "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-      "page": 8
-    },
-    {
+      "rank": 2,
       "refined_text": "GOI Budget Analytics Portal – https://www.indiabudget.gov.in/ Open Government Data Platform – https://data.gov.in/ Choudhary, S., & Mehta, K.",
       "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
       "page": 11
     },
     {
-      "refined_text": "NLP Applications in Public Finance Systems.",
+      "rank": 3,
+      "refined_text": "Natural Language Processing (NLP): Analyzes fund reports, policies, and audit documents for Anomaly Detection (ML Models): Identifies irregular or suspicious expenditures using machine learning Predictive Analytics: Forecasts future fund requirements, delays, and risks using AI models.",
       "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-      "page": 11
+      "page": 8
     },
     {
+      "rank": 3,
+      "refined_text": "PVG’s COE&SSDIOM Nashik | Department of Computer Engineering Data Integration: Collects structured and unstructured data like budgets, invoices, receipts, and reports from various government sources.",
+      "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
+      "page": 8
+    },
+    {
+      "rank": 4,
       "refined_text": "By integrating advanced technologies like machine learning, OCR, NLP, and predictive analytics, the system enables real-time monitoring of financial activities and detects anomalies with high accuracy.",
       "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
       "page": 10
     },
     {
-      "refined_text": "It addresses the long-standing issues of delayed reporting, lack of transparency, and manual auditing errors, ensuring proactive governance and data-driven decision-making.",
+      "rank": 4,
+      "refined_text": "Furthermore, the incorporation of forecasting capabilities helps in identifying future fund requirements and misuse risks, allowing better planning and optimized allocation of resources.",
       "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
       "page": 10
-    },
-    {
-      "refined_text": "Detect anomalies and irregularities in fund usage using machine learning.",
-      "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-      "page": 5
-    },
-    {
-      "refined_text": "Forecast future fund requirements and misuse risks using predictive analytics.",
-      "document": "“AI Based Real Time Government Fund Monitoring, Expenditure”_.pdf",
-      "page": 5
     }
   ]
 }
