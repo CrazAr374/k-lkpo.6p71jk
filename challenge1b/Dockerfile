@@ -1,5 +1,9 @@
 FROM python:3.9-slim
 
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
 # Set working directory
 WORKDIR /app
 
@@ -10,15 +14,17 @@ RUN apt-get update && apt-get install -y \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies
+# Upgrade pip and install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    python3 -m nltk.downloader punkt
 
 # Copy all project files
 COPY . .
 
-# Create input/output directories if not already in project
+# Ensure input/output directories exist
 RUN mkdir -p input output
 
-# Run process.py with Python optimizations
-CMD ["python", "-O", "process.py"]
+# Default command
+CMD ["python3", "-O", "process.py"]

@@ -1,4 +1,4 @@
-PyMuPDF
-nltk
-scikit-learn
-numpy
+PyMuPDF==1.22.5
+nltk==3.8.1
+scikit-learn==1.4.1
+numpy==1.24.4
