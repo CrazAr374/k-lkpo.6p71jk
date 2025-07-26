@@ -1,18 +1,24 @@
-# Use a lightweight Python base image
 FROM python:3.9-slim
 
+# Set working directory
 WORKDIR /app
 
-COPY process.py .
-COPY persona.json .
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
 COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install torch==2.0.1+cpu torchvision --extra-index-url https://download.pytorch.org/whl/cpu \
- && pip install --no-cache-dir -r requirements.txt \
- && python -c "import nltk; nltk.download('punkt')" \
- && python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('paraphrase-MiniLM-L6-v2')"
+# Copy all project files
+COPY . .
 
-# Create input and output folders
+# Create input/output directories if not already in project
 RUN mkdir -p input output
 
-CMD ["python", "process.py"]
+# Run process.py with Python optimizations
+CMD ["python", "-O", "process.py"]
