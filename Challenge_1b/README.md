@@ -1,54 +1,59 @@
-# Persona-Driven PDF Section Extractor
+# Challenge 1B – Persona-Based PDF Section Extractor
 
-## Overview
+This tool is designed for Adobe Hackathon – Challenge 1B. It helps identify the most relevant sections from a set of PDF documents, based on the user's role and the task they need to accomplish. It combines lightweight Natural Language Processing (NLP), TF-IDF-based section scoring, and smart keyword summarization to deliver focused and useful insights.
 
-This tool reads multiple PDFs, understands a user's persona and goal, and extracts the most relevant sections using TF-IDF similarity. Output is a structured JSON file.
+---
+
+## What This Project Does
+
+* Understands your **persona** and **objective**
+* Scans multiple PDFs and extracts relevant sections
+* Uses keyword-driven logic and ranking algorithms
+* Summarizes top content with brief insights
+* Produces a clean and structured JSON output
+
+---
 
 ## Folder Structure
 
 ```
 challenge1b/
-│
-├── Dockerfile
-├── requirements.txt
-├── process.py
-├── persona.json         ✅ Persona input
-├── input/               ✅ Folder containing input PDFs
-│   └── your_file1.pdf
-│   └── your_file2.pdf
-├── output/              ✅ Output will be written here
+├── Dockerfile              # Container configuration
+├── requirements.txt        # Python dependencies
+├── process.py              # Main script
+├── persona.json            # Input: user's persona and task
+├── input/                  # Folder for your PDFs
+└── output/                 # JSON output will be saved here
 ```
 
-## Quick Start
+---
 
-### 1. Build the Docker Image
+## How to Use This Tool
+
+### Step 1: Build the Docker Image
+
+Open your terminal and run:
 
 ```bash
 docker build -t persona-extractor .
 ```
 
-### 2. Prepare Your Files
+### Step 2: Add Your Inputs
 
-- **Place PDFs in `input/` folder**
-- **Edit `persona.json` as needed** (see format below)
+1. Place your PDF files inside the `input` folder.
+2. Create or edit the `persona.json` file like this:
 
-### 3. Run the Container
-
-**PowerShell:**
-```powershell
-docker run --rm `
-  -v "$(Get-Location)\input:/app/input" `
-  -v "$(Get-Location)\output:/app/output" `
-  -v "$(Get-Location)\persona.json:/app/persona.json" `
-  persona-extractor
+```json
+{
+  "persona": "PhD Researcher in Computational Biology",
+  "job_to_be_done": "Create a literature summary focused on methods, datasets, and benchmarks"
+}
 ```
 
-**CMD:**
-```cmd
-docker run --rm -v "%cd%\input:/app/input" -v "%cd%\output:/app/output" -v "%cd%\persona.json:/app/persona.json" persona-extractor
-```
+### Step 3: Run the Tool
 
-**Bash/Linux:**
+#### On Linux or macOS:
+
 ```bash
 docker run --rm \
   -v "$(pwd)/input:/app/input" \
@@ -57,125 +62,132 @@ docker run --rm \
   persona-extractor
 ```
 
-### 4. Check Results
+#### On Windows (Command Prompt):
 
-Results will be in `output/result.json`
-
-## Input Format
-
-### persona.json
-```json
-{
-  "persona": "PhD Researcher in Computational Biology",
-  "job_to_be_done": "Create a literature summary focused on methods, datasets, and benchmarks"
-}
+```cmd
+docker run --rm -v "%cd%\input:/app/input" -v "%cd%\output:/app/output" -v "%cd%\persona.json:/app/persona.json" persona-extractor
 ```
 
-## Expected Output
+#### On Windows (PowerShell):
+
+```powershell
+docker run --rm `
+  -v "$(Get-Location)\input:/app/input" `
+  -v "$(Get-Location)\output:/app/output" `
+  -v "$(Get-Location)\persona.json:/app/persona.json" `
+  persona-extractor
+```
+
+---
+
+## Output
+
+After processing, you will find the results in:
+
+```
+output/result.json
+```
+
+The JSON contains:
+
+* Input metadata
+* Ranked and scored relevant sections
+* Extracted keywords and summaries
+* A breakdown of subsections with contextual highlights
+
+---
+
+## Example Output Structure
 
 ```json
 {
   "metadata": {
-    "input_documents": [
-      "your_file1.pdf",
-      "your_file2.pdf"
-    ],
+    "input_documents": ["doc1.pdf", "doc2.pdf"],
     "persona": "PhD Researcher in Computational Biology",
-    "job_to_be_done": "Create a literature summary focused on methods, datasets, and benchmarks",
-    "processing_timestamp": "2025-07-25T16:36:01.573045"
+    "job_to_be_done": "Create a literature summary...",
+    "processing_timestamp": "2025-07-26T12:00:00"
   },
   "extracted_sections": [
     {
-      "document": "your_file1.pdf",
+      "document": "doc1.pdf",
       "page": 3,
-      "section_title": "Proposed Methodology / Prototype",
-      "importance_rank": 0.825,
+      "section_title": "Proposed Methodology",
+      "importance_rank": 0.843,
       "keywords": ["dataset", "algorithm", "benchmark"],
-      "summary": "This section introduces a new approach using XYZ algorithm for ABC problem...",
+      "summary": "This method improves accuracy using XYZ...",
       "sub_sections": [
         {
-          "refined_text": "This method shows performance improvement of 10% on XYZ dataset.",
-          "document": "your_file1.pdf",
+          "refined_text": "Our approach boosts accuracy by 12% on ABC dataset.",
+          "document": "doc1.pdf",
           "page": 3
         }
       ]
-    }
-  ],
-  "subsection_analysis": [
-    {
-      "document": "your_file1.pdf",
-      "refined_text": "This method shows performance improvement of 10% on XYZ dataset.",
-      "page": 3
     }
   ]
 }
 ```
 
-## Tech Stack
+---
 
-- **PyMuPDF (fitz)** for PDF parsing
-- **nltk** for text cleaning/splitting
-- **scikit-learn** for TF-IDF similarity
-- **numpy** for numerical operations
-- **Docker** for offline, CPU-only execution
+## How the System Works
+
+1. **Persona Input**
+   The script reads your persona and goal from `persona.json`.
+
+2. **PDF Parsing**
+   Each page of every PDF is scanned using PyMuPDF to extract text.
+
+3. **Section Scoring**
+   Sections are ranked using TF-IDF similarity and domain-specific keyword boosts.
+
+4. **Keyword Extraction and Summarization**
+   Important words and high-value sentences are selected using frequency and length rules.
+
+5. **Output Compilation**
+   Results are formatted into a structured JSON for easy reading or further processing.
+
+---
+
+## Key Features
+
+* Lightweight and fast (2–5 seconds for 3–5 PDFs)
+* Fully offline after Docker build
+* Prioritizes keywords relevant to scientific, technical, and financial domains
+* Works across different personas and research domains
+* Summarizes each section into clear, short points
+* Modular and easy to customize
+
+---
+
+## Technology Stack
+
+* Python 3.9 (via Docker)
+* PyMuPDF (`fitz`) for PDF text extraction
+* scikit-learn for TF-IDF vectorization and cosine similarity
+* NLTK for sentence tokenization
+* NumPy and standard libraries for processing and logic
+
+---
+
+## Customization Guide
+
+### Update Persona and Goals
+
+Change the `persona.json` file to fit your use case.
+
+### Prioritize Different Keywords
+
+Modify the `BOOST_KEYWORDS` list in `process.py` to focus on your domain-specific vocabulary.
+
+### Adjust Output Summary
+
+You can modify `extract_summary()` if you want to increase or decrease the number of sentences.
+
+---
 
 ## Performance
 
-- **Processing Time**: 2-5 seconds for 3-5 PDFs
-- **Memory Usage**: <100MB
-- **Fully Offline**: No internet required after build
-- **Lightweight**: No heavy ML models
-
-## Troubleshooting
-
-### Common Issues
-
-1. **No sections found**
-   - Ensure PDFs contain text (not just images)
-   - Check that PDFs are not corrupted
-
-2. **Permission errors**
-   - Ensure input/output folders exist and are writable
-
-### Debug Mode
-
-Run interactively to see detailed logs:
-```bash
-docker run -it --rm \
-  -v "$(pwd)/input:/app/input" \
-  -v "$(pwd)/output:/app/output" \
-  -v "$(pwd)/persona.json:/app/persona.json" \
-  persona-extractor
-```
-
-## Features
-
-✅ **TF-IDF Search**: Uses lightweight TF-IDF for section ranking
-✅ **Keyword Extraction**: Simple frequency-based keyword extraction
-✅ **Smart Summarization**: Sentence scoring based on keyword presence
-✅ **Persona-Driven**: Customizes output based on user role and goals
-✅ **Fast Processing**: Optimized for <5 second processing time
-✅ **Fully Offline**: No external dependencies or model downloads
-
-## How It Works
-
-1. **PDF Parsing**: Extracts text sections using PyMuPDF
-2. **Section Detection**: Identifies headings based on font size, bold text, and keywords
-3. **TF-IDF Ranking**: Uses scikit-learn's TF-IDF to rank sections by relevance
-4. **Keyword Extraction**: Identifies important terms using frequency analysis
-5. **Smart Summarization**: Selects sentences based on keyword density and length
-
-## Customization
-
-### Adding Keywords
-Edit the `BOOST_KEYWORDS` list in `process.py` to prioritize specific terms.
-
-### Changing Persona
-Modify `persona.json` to match your research domain and goals.
-
-### Output Format
-The tool extracts:
-- Top 5 most relevant sections
-- Keywords for each section
-- Summarized insights
-- Page references for easy navigation
+* Processes files within seconds
+* Uses less than 100 MB of memory
+* Requires no internet after Docker image build
+* Works well even with longer technical PDFs
