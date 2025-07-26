@@ -1,70 +1,85 @@
-# Adobe Hackathon 2025 – Intelligent PDF Analysis.
+# Adobe Hackathon 2025 – Intelligent PDF Analysis
 
 ## Overview
 
-This repository contains two modular yet interlinked tools developed for Adobe’s Hackathon Challenge:
+This repository presents a dual-system solution developed for Adobe Hackathon 2025. The goal is to enable **intelligent understanding and navigation of complex PDF documents** using lightweight, offline-compatible tools.
 
-| Challenge | Module         | Purpose                                                                                                                                                 |
-| --------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1A**    | `Challenge_1a/` | Automatically extract structured **section outlines (headings and subheadings)** from multilingual PDF documents                                        |
-| **1B**    | `Challenge_1b/` | Extract **relevant content sections** from PDFs using a **persona-driven ranking system**, optimized for literature reviews or goal-based summarization |
+The project is divided into two interconnected but standalone modules:
 
-Together, these tools provide an advanced, fast, and offline-compatible pipeline for navigating and understanding large or complex PDF documents.
+| Challenge | Folder         | Purpose                                                                |
+| --------- | -------------- | ---------------------------------------------------------------------- |
+| 1A        | `challenge1a/` | Extracts a structured outline (H1, H2, H3) from multilingual PDFs      |
+| 1B        | `challenge1b/` | Extracts and ranks content sections based on a user's persona and goal |
+
+Together, they provide an end-to-end document intelligence pipeline suitable for researchers, analysts, and developers working with large or unstructured PDF files.
 
 ---
 
 ## Challenge 1A – Hybrid Outline Extractor
 
-**Goal**: Automatically extract document structure by identifying heading hierarchies (H1, H2, H3) from PDFs.
+**Objective:** Extract document structure by detecting and classifying headings (H1, H2, H3) from PDFs, even when multilingual or poorly formatted.
 
-### How It Works:
+### How It Works
 
-* Uses **visual layout features**: font size, bold text, underline, alignment
-* Combines with **language-based signals**: multilingual heading keywords (English, Hindi, Japanese, etc.)
-* Applies a **hybrid scoring mechanism** to classify lines as H1/H2/H3
-* Groups headings into a **hierarchical outline**
-* Infers the title of the document based on metadata or largest centered text
+* **Visual Features:** Analyzes font size, boldness, underline, alignment, and capitalization.
+* **Language Signals:** Detects heading-like phrases using multilingual keywords (supports English, Hindi, Japanese, Spanish, French).
+* **Hybrid Scoring System:** Assigns heading levels based on both visual layout and linguistic patterns.
+* **Hierarchy Construction:** Groups extracted headings into a nested structure, forming an outline.
+* **Fallback Logic:** Ensures useful output even from noisy or unstructured PDFs.
 
-### Output:
+### Output
 
-* A structured `outline` per PDF in JSON format
-* Each entry includes heading level, page number, and formatting info
+Each input PDF produces a JSON file containing:
 
-> Works well with resumes, research papers, and multilingual PDFs.
+* Document title (inferred from metadata or visual cues)
+* Structured heading outline with H1–H3 levels
+* Formatting metadata (page, size, bold, alignment, etc.)
+
+Useful for processing academic papers, resumes, reports, and scanned PDFs with embedded text.
 
 ---
 
-## Challenge 1B – Persona-Driven Section Extractor
+## Challenge 1B – Persona-Based Section Extractor
 
-**Goal**: Extract and rank the **most relevant content sections** from multiple PDFs, based on a **user's persona and goal**.
+**Objective:** Extract and summarize the most relevant sections from one or more PDFs based on a defined **persona** and their **task or objective**.
 
-### How It Works:
+### How It Works
 
-* Takes input from a `persona.json` file (e.g., a researcher's role and goal)
-* Parses PDFs using `PyMuPDF` and identifies candidate sections based on content cues
-* Uses **TF-IDF similarity** between document sections and the persona-goal query
-* Boosts scores using **domain-specific keywords**
-* Outputs structured JSON with:
+* Reads user input from a `persona.json` file describing role and intent.
+* Parses PDFs to identify candidate sections.
+* Computes **TF-IDF similarity** between sections and persona/task.
+* Boosts ranking using pre-defined domain keywords (e.g., “methodology,” “benchmark,” “compliance”).
+* Generates a structured JSON output with:
 
   * Ranked relevant sections
-  * Summary sentences
-  * Keywords
-  * Page references for navigation
+  * Key keywords
+  * Concise summaries
+  * Page references and source context
 
-> Designed for researchers, analysts, and professionals who want targeted content from large documents.
+### Output
+
+For each run, produces a single JSON result file with:
+
+* Input metadata (files, persona, timestamp)
+* Scored and ranked sections
+* Summary sentences from each section
+* Keywords and page-level metadata
+* Subsections with refined extracted highlights
+
+Ideal for literature reviews, grant preparation, policy analysis, or industry research.
 
 ---
 
-## Why Our Models Are Different and Better
+## Why Our Models Stand Out
 
-| Feature                    | Traditional Extractors        | Our Model                                                 |
-| -------------------------- | ----------------------------- | --------------------------------------------------------- |
-| **Multilingual Support**   | Rarely supported              | Handles English, Hindi, French, Spanish, Japanese       |
-| **Hybrid Feature Scoring** | Usually font-size only        | Combines font, boldness, alignment, caps, and keywords  |
-| **Structured Output**      | Often flat or ungrouped       | Nested heading hierarchy with H1–H3 levels              |
-| **Persona Awareness**      | Not supported                 | Personalized extraction based on user intent            |
-| **Lightweight & Offline**  | Often model-heavy/cloud-based | Runs locally in Docker, fast and memory-efficient       |
-| **Fallback Safety**        | Fails on noisy PDFs           | Uses smart defaults and fallback logic to ensure output |
+| Feature                  | Common Solutions                       | Our Models                                              |
+| ------------------------ | -------------------------------------- | ------------------------------------------------------- |
+| Multilingual PDF Support | Rare or incomplete                     | Full support for English, Hindi, French, Japanese, etc. |
+| Hybrid Scoring           | Usually layout-based only              | Combines layout, text patterns, and semantic cues       |
+| Heading Hierarchy        | Often flat or shallow                  | Nested H1–H3 output with contextual relevance           |
+| Persona Adaptability     | Not supported                          | Customizable persona-specific section ranking           |
+| Lightweight & Offline    | Many depend on external APIs or models | Fully offline after Docker build, <100MB memory use     |
+| Resilience on Poor PDFs  | Prone to failure                       | Uses fallback logic to ensure partial useful output     |
 
 ---
 
@@ -72,51 +87,59 @@ Together, these tools provide an advanced, fast, and offline-compatible pipeline
 
 ```
 root/
-│
-├── challenge1a/         # Heading extraction (outline structure)
+├── challenge1a/               # Heading extraction (outline generator)
 │   ├── process.py
 │   ├── Dockerfile
 │   ├── input/
-|   ├── requirements.txt     # Shared dependencies
-│   └── output/
+│   ├── output/
+│   └── requirements.txt
 │
-├── challenge1b/         # Persona-driven content summarization
+├── challenge1b/               # Persona-based section extractor
 │   ├── process.py
 │   ├── Dockerfile
-|   ├── requirements.txt     # Shared dependencies
-│   ├── persona.json     # Define user role + goal
 │   ├── input/
-│   └── output/
+│   ├── output/
+│   ├── persona.json
+│   └── requirements.txt
 │
-└── README.md            # This file
+└── README.md                  # This file
 ```
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-Each module has its own Dockerfile and can run independently:
+Each module is containerized via Docker and can be run independently.
 
-### For Challenge 1A:
+### Run Challenge 1A: Outline Extractor
 
 ```bash
 cd challenge1a
 docker build -t pdf-outline-extractor .
-docker run --rm -v "$(pwd)/input:/app/input" -v "$(pwd)/output:/app/output" pdf-outline-extractor
+docker run --rm \
+  -v "$(pwd)/input:/app/input" \
+  -v "$(pwd)/output:/app/output" \
+  pdf-outline-extractor
 ```
 
-### For Challenge 1B:
+### Run Challenge 1B: Persona-Based Extractor
 
 ```bash
 cd challenge1b
 docker build -t persona-extractor .
-docker run --rm -v "$(pwd)/input:/app/input" -v "$(pwd)/output:/app/output" -v "$(pwd)/persona.json:/app/persona.json" persona-extractor
+docker run --rm \
+  -v "$(pwd)/input:/app/input" \
+  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/persona.json:/app/persona.json" \
+  persona-extractor
 ```
+
+On Windows (PowerShell), replace `$(pwd)` with `$(Get-Location)`.
 
 ---
 
 ## Summary
 
-This dual-model toolkit aims to **bridge the gap between document structure and meaning** by combining intelligent heading detection with personalized content extraction.
+This repository demonstrates a two-part solution that bridges the gap between **document structure (Challenge 1A)** and **semantic meaning (Challenge 1B)**.
 
-By prioritizing **lightweight processing**, **human-centered design**, and **real-world resilience**, our solution is built for practical and powerful PDF exploration—offline, multilingual, and fast.
+It is designed to operate **efficiently and reliably across real-world documents**, including multilingual and semi-structured PDFs. By focusing on hybrid scoring, offline usability, and modular design, this tool offers a robust framework for intelligent document processing—adaptable for industry, academia, and enterprise applications.
