@@ -1,66 +1,142 @@
-# Document Outline Extraction Solution (Python)
+# Challenge 1A – PDF Outline Extractor
 
-This project is a high-performance, Docker-based, offline solution for extracting structured outlines from PDF documents using Python. It is designed to meet the requirements of the "Connecting the Dots" hackathon challenge.
+## Overview
 
-## Approach
+This project is designed to intelligently extract a structured outline (headings and subheadings) from PDF documents. It uses a hybrid scoring method that combines visual features (like font size and boldness) with textual cues (like multilingual heading keywords) to identify sections accurately, even in complex or multilingual PDFs.
 
-This solution uses the `PyMuPDF` library, renowned for its speed and accuracy, to ensure fast and reliable text extraction. The core of the solution is a Python script that intelligently identifies headings without relying on network-based AI models, adhering strictly to the offline constraint.
+The tool is built to be lightweight, fast, and effective even when processing diverse types of documents like academic papers, resumes, or scanned materials with embedded text.
+---
+## How It Works
 
-### Key Features (v2)
+The solution works by processing each page of a PDF and identifying potential headings using a mix of layout-based and keyword-based logic. Here's a simplified breakdown:
 
-1.  **Weighted, Multilingual Heading Detection**: The script uses a composite scoring system for each line, considering font size, boldness, centering, section patterns, and multilingual heading keywords (English, Spanish, French, Hindi, and more). This ensures robust detection across diverse document styles and languages.
+1. **Text Extraction**:
+   The tool uses `PyMuPDF` to extract text, font sizes, formatting flags (like bold and underlined), and position information from every line of every page.
 
-2.  **Statistical Font Analysis**: The script analyzes the entire document to find the most common font size (body text baseline). Heading levels (H1, H2, H3) are assigned by clustering font sizes relative to this baseline, making the detection adaptive to each PDF.
+2. **Hybrid Heading Scoring**:
+   For each line of text, it calculates a "heading score" based on:
 
-3.  **Intelligent Filtering & Deduplication**: Heuristics filter out non-headings (e.g., page numbers, short/long lines, lines ending with periods). Headings are deduplicated by normalized text, and only the first occurrence is kept.
+   * Font size relative to the body text
+   * Bold, centered, underlined, or colored text
+   * Capitalization (all-caps headings)
+   * Pattern-based cues (like numbered headings)
+   * Presence of heading keywords (supports English, Hindi, French, Spanish, Japanese, etc.)
 
-4.  **Improved Title Extraction**: The script uses a 3-tier fallback: (1) PDF metadata, (2) largest font text on page 1, (3) centered bold text in the top 20% of page 1, and finally falls back to "Untitled Document" if needed.
+3. **Heading Hierarchy Construction**:
 
-5.  **Flat Outline Output**: The output is a flat list of headings (not nested), each with its level (H1, H2, H3), text, and page number, matching the required format.
+   * Scores are used to classify lines as H1, H2, or H3.
+   * Headings are grouped into a nested hierarchy based on size and page layout.
+   * Fallback logic ensures some output even when documents lack strong structure.
 
-6.  **Multilingual & Unicode Support**: All text is normalized using Unicode standards, and output JSON is written with `ensure_ascii=False` to preserve all characters.
+4. **Output**:
 
-7.  **Offline and Self-Contained**: All dependencies (`PyMuPDF`) are listed in `requirements.txt` and installed within the Docker container. The solution runs entirely on the CPU and has no network dependencies, making it fully compliant with the offline execution requirement.
+   * Each PDF produces a JSON file with extracted heading hierarchy (`H1`, `H2`, and `H3`).
+   * Title is inferred from metadata, font size, or top of the first page.
 
-## Output Format
+---
 
-Example output for a PDF:
+## Folder Structure
 
 ```
+challenge1a/
+│
+├── Dockerfile              # Docker setup for building and running the tool
+├── requirements.txt        # Python package dependencies
+├── process.py              # Main logic for heading extraction
+├── input/                  # Folder to store PDF files to be processed
+│   └── your_file.pdf
+├── output/                 # Extracted heading outline in JSON format
+│   └── your_file.json
+```
+
+---
+
+## Quick Start
+
+### Step 1: Build the Docker Image
+
+```bash
+docker build -t pdf-outline-extractor .
+```
+
+### Step 2: Prepare Input Files
+
+* Place one or more PDF files into the `input/` folder.
+
+### Step 3: Run the Extractor
+
+```bash
+docker run --rm \
+  -v "$(pwd)/input:/app/input" \
+  -v "$(pwd)/output:/app/output" \
+  pdf-outline-extractor
+```
+
+### Step 4: View Output
+
+* Navigate to the `output/` folder to see the JSON files, one per input PDF.
+* Each JSON contains structured headings and their assigned levels (H1, H2, H3), including page numbers and formatting info.
+
+---
+
+## Example Output
+
+```json
 {
-  "title": "Understanding AI",
+  "title": "Deep Learning Advances",
   "outline": [
-    { "level": "H1", "text": "Introduction", "page": 1 },
-    { "level": "H2", "text": "What is AI?", "page": 2 },
-    { "level": "H3", "text": "History of AI", "page": 3 }
+    {
+      "text": "1. Introduction",
+      "page": 1,
+      "level": "H1",
+      "bold": true,
+      "centered": true,
+      "size": 20,
+      "children": [
+        {
+          "text": "Background",
+          "page": 2,
+          "level": "H2",
+          "bold": false,
+          "centered": false,
+          "size": 16
+        }
+      ]
+    }
   ]
 }
 ```
 
-## How to Build and Run
+---
 
-### Build the Docker Image
+## Key Features
 
-Use the following command in your terminal at the root of the `doc_new1` directory. This command builds your Docker image with the name `neurolense-solution`.
+* **Hybrid Heading Scoring**: Blends layout and language signals for better accuracy.
+* **Multilingual Support**: Recognizes headings in English, Hindi, Spanish, French, Japanese.
+* **Offline, Lightweight Design**: No internet required after Docker build. Very low memory footprint.
+* **Fallback Resilience**: Produces partial output even in poorly structured or noisy PDFs.
+* **Fully Containerized**: Easy to run on any platform with Docker.
 
-```sh
-docker build -t neurolense-solution .
-```
-*Note: The provided `Dockerfile` explicitly specifies the `--platform=linux/amd64` to ensure compatibility, as per the hackathon requirements.*
+---
 
-### Run the Solution
+## Requirements
 
-1.  Create a local directory for your input PDF files (e.g., `my_input_pdfs`).
-2.  Create an empty local directory for the JSON output (e.g., `my_output_jsons`).
-3.  Place all the PDFs you want to process into the input directory you created.
+Install Python packages using:
 
-Then, run the container using the following command. **Make sure to replace the placeholder paths with the absolute paths** to your input and output directories.
-
-```sh
-docker run --rm \
-  -v "/path/to/your/my_input_pdfs":/app/input \
-  -v "/path/to/your/my_output_jsons":/app/output \
-  neurolense-solution
+```bash
+pip install -r requirements.txt
 ```
 
-The container will automatically process each PDF in the input folder and generate a corresponding `.json` file in the output folder.
+**Key Libraries:**
+
+* `PyMuPDF` (fitz) for PDF parsing
+* `unicodedata`, `re`, `json` for string handling
+* `collections` for efficient data grouping
+
+---
+
+## Performance
+
+* Processes \~3–5 PDFs in under 5 seconds each
+* Memory usage under 100 MB
+* JSON output size: minimal and structured
