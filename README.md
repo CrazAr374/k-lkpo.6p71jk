@@ -1,4 +1,4 @@
-# Adobe Hackathon 2025 – Intelligent PDF Analysis Suite
+# Adobe Hackathon 2025 – Intelligent PDF Analysis.
 
 ## Overview
 
