@@ -6,8 +6,8 @@ import unicodedata
 from collections import Counter, defaultdict
 
 # --- Configuration ---
-INPUT_DIR = '/input'
-OUTPUT_DIR = '/output'
+INPUT_DIR = 'input'
+OUTPUT_DIR = 'output'
 
 # --- Multilingual Heading Keywords ---
 HEADING_KEYWORDS = {
@@ -15,8 +15,10 @@ HEADING_KEYWORDS = {
     'spanish': ['capítulo', 'sección', 'parte', 'introducción', 'conclusión', 'resumen', 'perfil', 'educación', 'experiencia', 'habilidades', 'proyectos', 'certificaciones', 'intereses', 'idiomas', 'contacto'],
     'french': ['chapitre', 'section', 'partie', 'introduction', 'conclusion', 'résumé', 'profil', 'éducation', 'expérience', 'compétences', 'projets', 'certifications', 'intérêts', 'langues', 'contact'],
     'hindi': ['अध्याय', 'खंड', 'भाग', 'परिचय', 'निष्कर्ष', 'सारांश', 'प्रोफ़ाइल', 'शिक्षा', 'अनुभव', 'कौशल', 'परियोजनाएँ', 'प्रमाणपत्र', 'रुचियाँ', 'भाषाएँ', 'संपर्क'],
+    'japanese': ['章', '節', '概要', '導入', '結論']
     # Add more as needed
 }
+
 
 # --- Helper Functions ---
 def normalize_text(text):
